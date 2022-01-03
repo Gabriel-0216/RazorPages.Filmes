@@ -1,0 +1,49 @@
+﻿@page
+@model RazorPages.Filmes.WebApp.Pages.Movies.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movie.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movie.Launch_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Launch_Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movie.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Category)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movie.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Price)
+        </dd>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movie.Points)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Points)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Movie.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
